@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sections.css">
+    <style>
+        .about-header {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 5% 80px 10%;
+            gap: 50px;
+            background: linear-gradient(135deg, var(--stone-brown) 0%, #6B5D4F 100%);
+        }
+
+        .about-image {
+            flex: 0 0 320px;
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, var(--sand) 0%, var(--sand-2) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .about-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .about-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--lime-cream);
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #ededed;
+            line-height: 2;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .about-highlights {
+            display: none;
+        }
+
+        .highlight-card {
+            display: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-header {
+                flex-direction: column;
+                padding: 100px 10% 80px 10%;
+            }
+
+            .about-image {
+                min-height: 300px;
+                order: -1;
+            }
+
+            .about-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-header {
+                padding: 80px 5% 60px 5%;
+                gap: 30px;
+            }
+
+            .about-image {
+                flex: 0 0 220px;
+                width: 220px;
+                height: 220px;
+                min-height: 220px;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .about-content p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header class="header">
+        <a href="../index.html" class="logo">Swarnabha Banerjee</a>
+        <nav class="navMenu" id="navMenu">
+            <a href="../index.html#experience">Work Experience</a>
+            <a href="../index.html#education">Education</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <img src="../assets/icons/menu.svg" alt="Menu" class="menu-icon">
+            <img src="../assets/icons/close.svg" alt="Close" class="close-icon" style="display: none;">
+        </button>
+    </header>
+    <main>
+        <section class="about-header">
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Hello, my name is <strong>Swarnabha Banerjee</strong>, and I am from Kolkata, West Bengal.</p>
+                <p>I am an undergraduate Civil Engineering student at <strong>Jadavpur University, Kolkata</strong>. I am also pursuing 
+                    <strong>B.S. in Data Science and Applications</strong> at <strong>IIT Madras</strong>. I am currently improving my skills in mathematics, programming, and statistics.</p>
+                <p>I am highly interested in <strong>Physics, Mathematics, and Data Science</strong>. But I also love to explore every 
+                    possible field of science. For now, I am entirely focused on my coursework. Besides my studies, I love to 
+                    draw thumbnail sketches, write poetry, and play keyboard. I'm also exploring opportunities in 
+                    entrepreneurship and working on a startup.</p>
+                <p>Currently, I am looking for <strong>internships, projects, and research opportunities</strong> to gain hands-on experience.</p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <h3>Education</h3>
+                        <p>Civil Engineering & Data Science</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Location</h3>
+                        <p>Kolkata, West Bengal</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Interests</h3>
+                        <p>Physics & Data Science</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Hobbies</h3>
+                        <p>Drawing & Music</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="../assets/images/profile.jpeg" alt="profile picture">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Swarnabha Banerjee</p>
+        <nav>
+            <a href="https://linkedin.com/in/swarnabha-banerjee" target="_blank" class="social-icon" title="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/swarnabha0252/" target="_blank" class="social-icon" title="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+            <a href="mailto:swarnabha.banerjee2005@gmail.com" class="social-icon" title="Email">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+        </nav>
+        <a href="#top">Back to Top</a>
+    </footer>
+    <script>
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const menuIcon = hamburger.querySelector('.menu-icon');
+        const closeIcon = hamburger.querySelector('.close-icon');
+        const navLinks = navMenu.querySelectorAll('a');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
+            closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
+
+
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        
+        window.addEventListener('load', function() {
+
+            if (!window.location.hash) {
+                window.scrollTo(0, 0);
+            } else {
+
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    target.scrollIntoView();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

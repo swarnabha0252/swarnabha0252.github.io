@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sections.css">
+    <style>
+        .contact-section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 10% 80px 10%;
+            background: linear-gradient(135deg, var(--stone-brown) 0%, #6B5D4F 100%);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .contact-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--lime-cream);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: #ededed;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, rgba(244, 232, 124, 0.1) 0%, rgba(203, 191, 122, 0.05) 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            border-left: 5px solid var(--pale-amber);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(235, 243, 139, 0.2);
+        }
+
+        .contact-info ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-info li {
+            color: #ededed;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-info .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .contact-info a {
+            color: var(--pale-amber);
+            text-decoration: none;
+            transition: 0.5s;
+            word-break: break-all;
+        }
+
+        .contact-info a:hover {
+            color: var(--lime-cream);
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, rgba(235, 243, 139, 0.05) 0%, rgba(244, 232, 124, 0.08) 100%);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(235, 243, 139, 0.2);
+        }
+
+        .contact-form h2 {
+            font-size: 1.8rem;
+            color: var(--lime-cream);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .contact-form label {
+            display: block;
+            color: var(--pale-amber);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(235, 243, 139, 0.3);
+            border-radius: 8px;
+            background-color: rgba(88, 77, 61, 0.4);
+            color: #ededed;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--pale-amber);
+            background-color: rgba(88, 77, 61, 0.6);
+            box-shadow: 0 0 0 2px rgba(244, 232, 124, 0.1);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(235, 243, 139, 0.5);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--pale-amber) 0%, #f4e87c 100%);
+            color: var(--stone-brown);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #f4e87c 0%, var(--pale-amber) 100%);
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 100px 5% 80px 5%;
+            }
+
+            .contact-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .contact-info {
+                padding: 20px;
+                margin-bottom: 40px;
+            }
+
+            .contact-section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-section {
+                padding: 80px 4% 60px 4%;
+            }
+
+            .contact-section h1 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .contact-section p {
+                font-size: 0.9rem;
+                margin-bottom: 30px;
+            }
+
+            .contact-container {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding: 18px;
+                margin-bottom: 30px;
+                border-radius: 10px;
+            }
+
+            .contact-info li {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .contact-form {
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .contact-form h2 {
+                font-size: 1.3rem;
+            }
+
+            .form-group {
+                margin-bottom: 18px;
+            }
+
+            .contact-form label {
+                font-size: 0.9rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.95rem;
+                padding: 10px 12px;
+            }
+
+            .submit-btn {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header class="header">
+        <a href="../index.html" class="logo">Swarnabha Banerjee</a>
+        <nav class="navMenu" id="navMenu">
+            <a href="../index.html#experience">Work Experience</a>
+            <a href="../index.html#education">Education</a>
+            <a href="../index.html#skills">Skills</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <img src="../assets/icons/menu.svg" alt="Menu" class="menu-icon">
+            <img src="../assets/icons/close.svg" alt="Close" class="close-icon" style="display: none;">
+        </button>
+    </header>
+    <main>
+        <section class="contact-section">
+            <div class="contact-container">
+                <h1>Get in Touch</h1>
+                <p>I'd love to hear from you! Feel free to reach out via email or connect with me on LinkedIn.</p>
+
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <img src="../assets/icons/email.svg" alt="Email" class="icon">
+                            <strong style="color: var(--pale-amber);">Email:</strong><br>
+                            <a href="mailto:swarnabha.banerjee2005@gmail.com">swarnabha.banerjee2005@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="../assets/icons/linkedin.svg" alt="LinkedIn" class="icon">
+                            <strong style="color: var(--pale-amber);">LinkedIn:</strong><br>
+                            <a href="https://linkedin.com/in/swarnabha-banerjee" target="_blank">linkedin.com/in/swarnabha-banerjee</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Swarnabha Banerjee</p>
+        <nav>
+            <a href="https://linkedin.com/in/swarnabha-banerjee" target="_blank" class="social-icon" title="LinkedIn">
+                <img src="../assets/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/swarnabha0252/" target="_blank" class="social-icon" title="GitHub">
+                <img src="../assets/icons/github.svg" alt="GitHub">
+            </a>
+            <a href="mailto:swarnabha.banerjee2005@gmail.com" class="social-icon" title="Email">
+                <img src="../assets/icons/email.svg" alt="Email">
+            </a>
+        </nav>
+        <a href="#top">Back to Top</a>
+    </footer>
+    <script>
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const menuIcon = hamburger.querySelector('.menu-icon');
+        const closeIcon = hamburger.querySelector('.close-icon');
+        const navLinks = navMenu.querySelectorAll('a');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
+            closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
+
+        // Handle hash navigation and page load
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        
+        window.addEventListener('load', function() {
+            // Only scroll to top if there's no hash, otherwise let the hash navigation handle it
+            if (!window.location.hash) {
+                window.scrollTo(0, 0);
+            } else {
+                // Allow hash navigation to work
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    target.scrollIntoView();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
